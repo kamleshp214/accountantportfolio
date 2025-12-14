@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanjana Patidar | Finance & Compliance Portfolio</title>
+    <meta name="description" content="Premium Portfolio of Sanjana Patidar - Accounting & Taxation Graduate.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- 1. PREMIUM VARIABLES --- */
+        :root {
+            /* Executive Palette */
+            --bg-main: #020617;       /* Deepest Midnight */
+            --bg-card: #0f172a;       /* Dark Slate */
+            --bg-card-hover: #1e293b; /* Lighter Slate */
+            --accent-gold: #c29d59;   /* Matte Gold (Wealth/Value) */
+            --text-white: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-subtle: rgba(255, 255, 255, 0.08);
+            
+            /* Social Colors */
+            --linkedin: #0077b5;
+            --instagram: #E1306C;
+
+            /* Gradients */
+            --gradient-gold: linear-gradient(135deg, #c29d59 0%, #a17f3d 100%);
+            
+            /* Spacing & Radius */
+            --radius-lg: 24px;
+            --radius-md: 16px;
+            --container-width: 1100px;
+        }
+
+        /* --- 2. RESET & BASE --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-white);
+            font-family: 'Manrope', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            color: var(--text-white);
+        }
+
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        ul { list-style: none; }
+        
+        svg {
+            width: 24px;
+            height: 24px;
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        /* --- 3. UTILITIES --- */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .gold-text { color: var(--accent-gold); font-style: italic; }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 28px;
+            border-radius: 100px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            letter-spacing: 0.3px;
+            gap: 10px;
+        }
+
+        .btn-gold {
+            background: var(--gradient-gold);
+            color: #000;
+            border: none;
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(194, 157, 89, 0.2);
+        }
+        
+        .btn-outline {
+            border: 1px solid var(--border-subtle);
+            color: var(--text-white);
+            background: transparent;
+        }
+        
+        .btn-outline:hover {
+            border-color: var(--accent-gold);
+            color: var(--accent-gold);
+        }
+
+        .section-padding { padding: 100px 0; }
+
+        /* --- 4. NAVIGATION (Minimal Floating) --- */
+        .nav-wrapper {
+            position: fixed;
+            top: 24px;
+            left: 0; 
+            right: 0;
+            display: flex;
+            justify-content: center;
+            z-index: 1000;
+            pointer-events: none; /* Allow clicking through wrapper */
+        }
+
+        .nav-dock {
+            pointer-events: auto;
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--border-subtle);
+            padding: 10px 30px;
+            border-radius: 100px;
+            display: flex;
+            gap: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .nav-dock a {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            position: relative;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-dock a:hover, .nav-dock a.active {
+            color: var(--text-white);
+        }
+
+        .nav-dock a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 4px;
+            background: var(--accent-gold);
+            border-radius: 50%;
+        }
+
+        /* --- 5. BENTO GRID HERO --- */
+        .hero-section {
+            padding-top: 140px;
+            padding-bottom: 80px;
+            min-height: 100vh;
+        }
+
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, auto); /* Flexible rows */
+            gap: 20px;
+        }
+
+        .bento-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-lg);
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.4s ease, border-color 0.4s ease;
+        }
+
+        .bento-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 255, 255, 0.2);
+            background: var(--bg-card-hover);
+        }
+
+        /* Card 1: Main Intro */
+        .card-intro {
+            grid-column: span 2;
+            grid-row: span 2;
+            justify-content: space-between;
+            background: radial-gradient(circle at top right, rgba(194, 157, 89, 0.1), transparent 60%), var(--bg-card);
+        }
+
+        .intro-header h4 { font-family: 'Manrope', sans-serif; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; color: var(--accent-gold); margin-bottom: 15px; }
+        .intro-header h1 { font-size: 3.2rem; line-height: 1.1; margin-bottom: 20px; }
+        .intro-desc { color: var(--text-muted); font-size: 1rem; margin-bottom: 30px; max-width: 90%; }
+
+        /* Card 2: Socials (Replaces Photo) */
+        .card-socials {
+            grid-column: span 1;
+            grid-row: span 2;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            background: linear-gradient(to bottom, var(--bg-card), #0b1120);
+        }
+        
+        .social-btn {
+            width: 100%;
+            padding: 15px;
+            border-radius: 12px;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--border-subtle);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            color: var(--text-white);
+            transition: 0.3s;
+        }
+        
+        .social-btn:hover { background: rgba(255,255,255,0.08); }
+        .social-btn.linkedin:hover { border-color: var(--linkedin); color: var(--linkedin); }
+        .social-btn.instagram:hover { border-color: var(--instagram); color: var(--instagram); }
+
+        /* Card 3: Status */
+        .card-status {
+            grid-column: span 1;
+            grid-row: span 1;
+            justify-content: center;
+        }
+
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(34, 197, 94, 0.1);
+            color: #22c55e;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            align-self: flex-start;
+        }
+        .status-dot { width: 6px; height: 6px; background: currentColor; border-radius: 50%; animation: pulse 2s infinite; }
+
+        /* Card 4 & 5: Stats */
+        .card-stat {
+            grid-column: span 1;
+            grid-row: span 1;
+            justify-content: center;
+        }
+        .stat-num { font-size: 2.8rem; font-family: 'Playfair Display', serif; color: var(--text-white); line-height: 1; }
+        .stat-label { font-size: 0.8rem; color: var(--text-muted); margin-top: 5px; text-transform: uppercase; letter-spacing: 0.5px;}
+
+        /* Card 6: Tech Stack */
+        .card-tech {
+            grid-column: span 2;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .tech-icons { display: flex; gap: 25px; align-items: center; }
+        .tech-item { display: flex; flex-direction: column; align-items: center; gap: 8px; color: var(--text-muted); font-size: 0.75rem; transition: 0.3s; }
+        .tech-item svg { width: 28px; height: 28px; color: var(--text-white); opacity: 0.7; }
+        .tech-item:hover svg { opacity: 1; color: var(--accent-gold); }
+
+        /* Card 7: CTA */
+        .card-cta {
+            grid-column: span 2;
+            background: var(--gradient-gold);
+            color: #050505;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .card-cta h3 { color: #050505; margin: 0; font-weight: 700; font-size: 1.1rem; }
+        .arrow-btn { width: 45px; height: 45px; background: #000; border-radius: 50%; color: #fff; display: flex; align-items: center; justify-content: center; transform: rotate(-45deg); transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        .card-cta:hover .arrow-btn { transform: rotate(0deg) scale(1.1); }
+
+        /* --- 6. EXPERIENCE --- */
+        .section-header { margin-bottom: 60px; }
+        .section-header h2 { font-size: 2.5rem; margin-bottom: 10px; }
+        .section-header p { color: var(--text-muted); }
+
+        .job-card {
+            background: transparent;
+            border-bottom: 1px solid var(--border-subtle);
+            padding: 40px 0;
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            transition: 0.3s;
+        }
+
+        .job-card:hover { border-color: var(--accent-gold); }
+        .job-card:last-child { border-bottom: none; }
+
+        .job-meta h4 { font-size: 1.1rem; margin-bottom: 5px; color: var(--text-white); }
+        .job-meta span { color: var(--accent-gold); font-size: 0.9rem; font-family: 'Playfair Display', serif; font-style: italic; }
+        .job-meta p { color: var(--text-muted); font-size: 0.85rem; margin-top: 5px; }
+        
+        .job-details h3 { font-size: 1.4rem; margin-bottom: 15px; font-family: 'Manrope', sans-serif; color: var(--text-white); }
+        .job-details ul { margin-left: 18px; }
+        .job-details li { margin-bottom: 10px; color: var(--text-muted); list-style-type: disc; padding-left: 5px; }
+
+        /* --- 7. EXPERTISE GRID --- */
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .expert-item {
+            background: var(--bg-card);
+            padding: 35px;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-subtle);
+            transition: 0.3s;
+        }
+
+        .expert-item:hover { transform: translateY(-5px); border-color: var(--accent-gold); background: var(--bg-card-hover); }
+
+        .expert-icon { 
+            width: 50px; height: 50px; 
+            background: rgba(194, 157, 89, 0.1); 
+            border-radius: 12px; 
+            display: flex; align-items: center; justify-content: center;
+            color: var(--accent-gold);
+            margin-bottom: 25px;
+        }
+        
+        .expert-item h3 { font-size: 1.2rem; margin-bottom: 12px; font-family: 'Manrope', sans-serif; font-weight: 600; }
+        .expert-item p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.7; }
+
+        /* --- 8. CONTACT FORM --- */
+        .contact-layout {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 80px;
+            align-items: start;
+        }
+
+        .form-box {
+            background: var(--bg-card);
+            padding: 40px;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-subtle);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        .input-group { margin-bottom: 25px; }
+        .input-group label { display: block; margin-bottom: 10px; font-size: 0.85rem; color: var(--text-muted); font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px;}
+        
+        .form-input {
+            width: 100%;
+            background: rgba(2, 6, 23, 0.5);
+            border: 1px solid var(--border-subtle);
+            padding: 16px;
+            border-radius: 8px;
+            color: white;
+            font-family: 'Manrope', sans-serif;
+            transition: 0.3s;
+            font-size: 1rem;
+        }
+
+        .form-input:focus { outline: none; border-color: var(--accent-gold); background: rgba(2, 6, 23, 0.8); }
+
+        /* Footer */
+        .footer { 
+            border-top: 1px solid var(--border-subtle); 
+            padding: 60px 0 40px; 
+            text-align: center; 
+            margin-top: 80px; 
+        }
+        
+        .footer-text {
+            font-size: 1.1rem;
+            color: var(--text-white);
+            margin-bottom: 10px;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .footer-sub { font-size: 0.85rem; color: var(--text-muted); opacity: 0.6; }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 1024px) {
+            .bento-grid { grid-template-columns: repeat(2, 1fr); }
+            /* Intro takes top row */
+            .card-intro { grid-column: span 2; grid-row: auto; }
+            /* Socials takes full width below intro */
+            .card-socials { grid-column: span 2; grid-row: auto; padding: 30px; }
+            .social-btn { width: auto; min-width: 200px; }
+            
+            .card-status { grid-column: span 1; }
+            .card-stat { grid-column: span 1; }
+            .card-tech { grid-column: span 2; }
+            .card-cta { grid-column: span 2; }
+        }
+
+        @media (max-width: 768px) {
+            .hero-section { padding-top: 100px; }
+            
+            /* Stack everything on mobile */
+            .bento-grid { grid-template-columns: 1fr; display: flex; flex-direction: column; gap: 15px; }
+            .card-intro h1 { font-size: 2.5rem; }
+            
+            .card-socials { flex-direction: column; align-items: stretch; }
+            .social-btn { width: 100%; }
+
+            .job-card { grid-template-columns: 1fr; gap: 15px; padding: 30px 0; }
+            .expertise-grid { grid-template-columns: 1fr; }
+            .contact-layout { grid-template-columns: 1fr; gap: 40px; }
+            
+            /* Mobile Nav */
+            .nav-dock { 
+                position: fixed;
+                bottom: 20px; 
+                top: auto; 
+                padding: 12px 20px; 
+                gap: 20px; 
+                background: rgba(15,23,42,0.95);
+                width: 90%;
+                justify-content: space-between;
+            }
+            .nav-wrapper { top: auto; bottom: 0; padding-bottom: 20px; }
+        }
+
+        /* Animation Keyframes */
+        @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.4; } 100% { opacity: 1; } }
+        
+        /* Reveal Animation Class */
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION (Floating Dock) -->
+    <div class="nav-wrapper">
+        <nav class="nav-dock">
+            <a href="#home" class="active">Home</a>
+            <a href="#expertise">Skills</a>
+            <a href="#experience">Work</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </div>
+
+    <!-- HERO SECTION (BENTO GRID) -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="bento-grid">
+                
+                <!-- 1. Intro Card -->
+                <div class="bento-card card-intro reveal">
+                    <div>
+                        <div class="intro-header">
+                            <h4>Sanjana Patidar</h4>
+                            <h1>Finance <span class="gold-text">Precision</span> meets<br>Strategy.</h1>
+                        </div>
+                        <p class="intro-desc">Accountant & Taxation Graduate with rigorous CA firm training. Expert in GST compliance, audit defense, and Tally ERP.</p>
+                    </div>
+                    <div>
+                        <a href="https://drive.google.com/file/d/151_rU1z7xPyus6hkm7OvXKsLG9NC4AIR/view?usp=sharing" target="_blank" class="btn btn-gold">
+                            Download Resume
+                            <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 2. Socials Hub (Replaces Photo) -->
+                <div class="bento-card card-socials reveal">
+                    <h3 style="width: 100%; text-align: center; font-size: 1rem; color: var(--text-muted); margin-bottom: 5px;">Let's Connect</h3>
+                    
+                    <a href="https://www.linkedin.com/in/sanjana-patidar-631356295/" target="_blank" class="social-btn linkedin">
+                        <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                        <span>LinkedIn</span>
+                    </a>
+                    
+                    <a href="https://www.instagram.com/_sanjana1854/" target="_blank" class="social-btn instagram">
+                        <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        <span>Instagram</span>
+                    </a>
+                </div>
+
+                <!-- 3. Status -->
+                <div class="bento-card card-status reveal">
+                    <span class="status-badge"><span class="status-dot"></span> Available</span>
+                    <h3 style="font-family: 'Manrope'; font-size: 1rem; color: var(--text-muted); margin-bottom: 5px;">Role Preference:</h3>
+                    <p style="font-weight: 700; font-size: 1.1rem;">Accounts Executive</p>
+                </div>
+
+                <!-- 4. Stat: Returns -->
+                <div class="bento-card card-stat reveal">
+                    <span class="stat-num" data-val="40">0</span>
+                    <span class="stat-label">Returns Filed</span>
+                </div>
+
+                <!-- 5. Stat: Exp -->
+                <div class="bento-card card-stat reveal">
+                    <span class="stat-num" data-val="18">0</span>
+                    <span class="stat-label">Months Exp</span>
+                </div>
+
+                <!-- 6. Tech Stack (SVG Icons) -->
+                <div class="bento-card card-tech reveal">
+                    <h3 style="font-size: 1.1rem; color: var(--text-white);">Tech Stack</h3>
+                    <div class="tech-icons">
+                        <div class="tech-item">
+                            <!-- Monitor Icon -->
+                            <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                            <span>Tally</span>
+                        </div>
+                        <div class="tech-item">
+                            <!-- FileText Icon -->
+                            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                            <span>GST</span>
+                        </div>
+                        <div class="tech-item">
+                            <!-- TrendingUp Icon -->
+                            <svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+                            <span>Excel</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. CTA Block -->
+                <a href="#experience" class="bento-card card-cta reveal">
+                    <h3>See My Work Journey</h3>
+                    <div class="arrow-btn">
+                        <svg viewBox="0 0 24 24" style="width: 20px; height: 20px;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERTISE SECTION -->
+    <section id="expertise" class="section-padding">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Technical Expertise</h2>
+                <p>Bridging complex regulations with flawless execution.</p>
+            </div>
+            
+            <div class="expertise-grid">
+                <!-- 1 -->
+                <div class="expert-item reveal">
+                    <div class="expert-icon">
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                    </div>
+                    <h3>GST Compliance</h3>
+                    <p>End-to-end filing of GSTR-1 and GSTR-3B. Reconciliation of GSTR-2A/2B with books ensuring max ITC claim.</p>
+                </div>
+                <!-- 2 -->
+                <div class="expert-item reveal">
+                    <div class="expert-icon">
+                        <svg viewBox="0 0 24 24"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>
+                    </div>
+                    <h3>Audit Support</h3>
+                    <p>Departmental audit assistance. Vouching, verification of expenses, and preparation of audit files for CAs.</p>
+                </div>
+                <!-- 3 -->
+                <div class="expert-item reveal">
+                    <div class="expert-icon">
+                        <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                    </div>
+                    <h3>Tally & Accounting</h3>
+                    <p>Expertise in Tally Prime. Voucher entry, ledger scrutiny, Bank Reconciliation Statements (BRS), and Stock maintenance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience" class="section-padding" style="background: rgba(255,255,255,0.02);">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Professional Journey</h2>
+            </div>
+
+            <!-- Job 1 -->
+            <div class="job-card reveal">
+                <div class="job-meta">
+                    <h4>Krishan Garg & Co.</h4>
+                    <span>Oct 2023 – Oct 2024</span>
+                    <p>Indore, M.P.</p>
+                </div>
+                <div class="job-details">
+                    <h3>Chartered Accountant Intern</h3>
+                    <ul>
+                        <li><strong>High Volume Filing:</strong> Managed 40+ Direct/Indirect tax returns independently with zero penalty notices.</li>
+                        <li><strong>Audit Defense:</strong> Supported 3 GST departmental audits by creating precise reconciliation statements.</li>
+                        <li><strong>Client Communication:</strong> Drafted responses to tax notices and compliance reminders.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Job 2 -->
+            <div class="job-card reveal">
+                <div class="job-meta">
+                    <h4>Megha Jain & Associates</h4>
+                    <span>Feb 2023 – Aug 2023</span>
+                    <p>Indore, M.P.</p>
+                </div>
+                <div class="job-details">
+                    <h3>Chartered Accountant Intern</h3>
+                    <ul>
+                        <li><strong>Data Precision:</strong> Handled end-to-end Tally data entry for 30+ clients monthly.</li>
+                        <li><strong>Inventory Control:</strong> Conducted physical stock verification for manufacturing clients.</li>
+                        <li><strong>Documentation:</strong> Maintained audit working papers and client files.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section class="section-padding">
+        <div class="container">
+             <div class="section-header reveal">
+                <h2>Education</h2>
+            </div>
+            <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+                <div class="bento-card reveal" style="flex: 1; min-width: 280px; flex-direction: column; align-items: flex-start;">
+                    <h4 style="color: var(--accent-gold); font-size: 1.1rem; margin-bottom: 5px;">B.Com (Tax Procedure)</h4>
+                    <p style="font-weight: 600;">P.M.B. Gujarati Commerce College</p>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">Final Year (Pursuing)</p>
+                </div>
+                <div class="bento-card reveal" style="flex: 1; min-width: 280px; flex-direction: column; align-items: flex-start;">
+                    <h4 style="color: var(--accent-gold); font-size: 1.1rem; margin-bottom: 5px;">12th Commerce</h4>
+                    <p style="font-weight: 600;">Gyan Sagar Academy</p>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">68% | 2022</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <div class="contact-layout">
+                <div class="reveal">
+                    <h1 style="font-size: 3rem; margin-bottom: 20px;">Ready to <br><span class="gold-text">Start.</span></h1>
+                    <p style="color: var(--text-muted); margin-bottom: 40px; font-size: 1.1rem;">I am available for full-time roles in Accounting and Taxation. I can join immediately.</p>
+                    
+                    <div style="margin-bottom: 30px;">
+                        <h5 style="color: var(--text-white); font-size: 0.9rem; text-transform: uppercase; margin-bottom: 5px;">Email</h5>
+                        <p style="color: var(--text-muted); font-size: 1.1rem;">sanjanapatidar6267@gmail.com</p>
+                    </div>
+                    <div>
+                        <h5 style="color: var(--text-white); font-size: 0.9rem; text-transform: uppercase; margin-bottom: 5px;">Phone</h5>
+                        <p style="color: var(--text-muted); font-size: 1.1rem;">+91 62672 79315</p>
+                    </div>
+                </div>
+
+                <div class="form-box reveal" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+                    <div style="margin-bottom: 30px;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width: 60px; height: 60px; color: var(--accent-gold); margin-bottom: 20px;"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                        <h3 style="font-size: 1.5rem; margin-bottom: 10px;">Let's Connect Professionally</h3>
+                        <p style="color: var(--text-muted);">Reach out to me directly on LinkedIn for opportunities.</p>
+                    </div>
+                    
+                    <a href="https://www.linkedin.com/in/sanjana-patidar-631356295/" target="_blank" class="btn btn-gold" style="width: 100%; max-width: 300px;">
+                        Connect on LinkedIn
+                        <svg viewBox="0 0 24 24" style="width: 20px; height: 20px;"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">Made with 🤍 by Sanjana.</p>
+            <p class="footer-sub">Crafted with precision & ambition.</p>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script>
+        // 1. Reveal on Scroll
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealOnScroll = () => {
+            const windowHeight = window.innerHeight;
+            const elementVisible = 100;
+            revealElements.forEach((reveal) => {
+                const elementTop = reveal.getBoundingClientRect().top;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveal.classList.add('active');
+                }
+            });
+        };
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll(); // Trigger on load
+
+        // 2. Number Counter Animation
+        const counters = document.querySelectorAll('.stat-num');
+        let hasCounted = false;
+
+        const startCounting = () => {
+            if(hasCounted) return;
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-val');
+                const suffix = target === 18 ? "+" : "+";
+                let count = 0;
+                const updateCount = () => {
+                    const increment = target / 40;
+                    if(count < target) {
+                        count += increment;
+                        counter.innerText = Math.ceil(count) + suffix;
+                        setTimeout(updateCount, 40);
+                    } else {
+                        counter.innerText = target + suffix;
+                    }
+                };
+                updateCount();
+            });
+            hasCounted = true;
+        };
+
+        // Trigger counting when stats are in view
+        const statSection = document.querySelector('.card-stat');
+        const observer = new IntersectionObserver((entries) => {
+            if(entries[0].isIntersecting) startCounting();
+        });
+        if(statSection) observer.observe(statSection);
+
+        // 3. Nav Active State
+        const sections = document.querySelectorAll('section');
+        const navLi = document.querySelectorAll('.nav-dock a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if(scrollY >= (sectionTop - 300)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLi.forEach(a => {
+                a.classList.remove('active');
+                if(a.getAttribute('href').includes(current)) {
+                    a.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
