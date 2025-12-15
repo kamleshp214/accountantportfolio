@@ -1,123 +1,235 @@
-\documentclass[a4paper,10pt]{article}
-\usepackage[left=0.6in,right=0.6in,top=0.5in,bottom=0.5in]{geometry}
-\usepackage{paracol}
+\documentclass[a4paper,11pt]{article}
+\usepackage[margin=0cm]{geometry}
+\usepackage{tikz}
+\usepackage{fontawesome5}
+\usepackage{xcolor}
 \usepackage{enumitem}
-\usepackage{titlesec}
 \usepackage{graphicx}
-\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
+\usepackage{tabularx}
+
+% Color palette
+\definecolor{darkblue}{RGB}{31,58,96}
+\definecolor{accentblue}{RGB}{65,105,225}
+\definecolor{lightgray}{RGB}{245,245,245}
+\definecolor{medgray}{RGB}{120,120,120}
 
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
-
-\titleformat{\section}{\small\bfseries\uppercase}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{8pt}{6pt}
+\setlength{\parskip}{0pt}
 
 \begin{document}
 
-\begin{paracol}{2}
-\setlength{\columnsep}{1.2cm}
+% Background sidebar
+\begin{tikzpicture}[remember picture,overlay]
+\fill[darkblue] (current page.north west) rectangle ([xshift=6.8cm]current page.south west);
+\end{tikzpicture}
 
-%================ LEFT COLUMN =================
-\switchcolumn[0]
+% Left sidebar
+\begin{tikzpicture}[remember picture,overlay]
+\node[anchor=north west, xshift=0.5cm, yshift=-0.7cm] at (current page.north west) {
+\begin{minipage}[t]{6.3cm}
+\color{white}
 
-{\LARGE \textbf{SANJANA PATIDAR}}
-
-\section*{Professional Summary}
-\small
-CA-trained accounting professional with over 18 months of hands-on experience in taxation, GST compliance, statutory filings, and audit support across two Chartered Accountant firms. Demonstrated ability to independently manage return filings, support departmental audits, and maintain accurate financial records while adhering to statutory deadlines and compliance standards.
-
-\section*{Key Compliance Exposure}
-\small
-\begin{itemize}[leftmargin=12pt,itemsep=3pt]
-\item GST compliance including GSTR-1 and GSTR-3B preparation and filing
-\item TDS and Income Tax Return assistance for individual and business clients
-\item Statutory documentation and reconciliation between books and returns
-\item Audit coordination and support during GST departmental proceedings
-\end{itemize}
-
-\section*{Work History}
-\small
-\textbf{Chartered Accountant Intern} \hfill Oct 2023 -- Oct 2024\\
-\textit{Krishan Garg \& Co., Indore}
-
-\begin{itemize}[leftmargin=12pt,itemsep=3pt]
-\item Independently filed 40+ GST, TDS, and ITR returns using structured compliance checklists, ensuring 100\% on-time submission
-\item Assisted in multiple GST departmental audits by preparing audit files, reconciling discrepancies, and organizing supporting documentation
-\item Drafted professional tax communications including notice replies, compliance reminders, and clarification responses
-\item Improved documentation efficiency by standardizing filing formats, reducing average preparation time by approximately 50\%
-\end{itemize}
-
-\textbf{Chartered Accountant Intern} \hfill Feb 2023 -- Aug 2023\\
-\textit{Megha Jain \& Associates, Indore}
-
-\begin{itemize}[leftmargin=12pt,itemsep=3pt]
-\item Managed Tally-based accounting for 30+ client accounts, maintaining ledgers, vouchers, and financial statements with strict verification controls
-\item Conducted physical stock verification across multiple audit assignments, reconciling over 2,000 inventory items
-\item Prepared audit working papers and financial summaries for senior-level review and reporting
-\item Coordinated routine client communication and follow-ups with tax authorities
-\end{itemize}
-
-\section*{Professional Strengths}
-\small
-\begin{itemize}[leftmargin=12pt,itemsep=3pt]
-\item High attention to detail in compliance-oriented work
-\item Ability to manage multiple client deadlines simultaneously
-\item Clear written communication for professional and statutory contexts
-\item Strong learning orientation within structured accounting environments
-\end{itemize}
-
-%================ RIGHT COLUMN =================
-\switchcolumn
-
+% Photo (enlarged)
 \begin{center}
-\fbox{\includegraphics[width=3.8cm,height=4.8cm,keepaspectratio]{photo.png}}
+\begin{tikzpicture}
+\draw[white, line width=2.5pt] (0,0) rectangle (3.6,4.5);
+\clip (0,0) rectangle (3.6,4.5);
+\node[anchor=center] at (1.8,2.25)
+{\includegraphics[width=3.6cm,height=4.5cm,keepaspectratio]{photo.jpg}};
+\end{tikzpicture}
 \end{center}
 
-\section*{Contact}
-\small
-Village Chiroli Kalan, Teh. Badnagar\\
-Dist. Ujjain, M.P.\\
-\textbf{Phone:} 6267279315\\
-\textbf{Email:} sanjanapatidar6267@gmail.com
+\vspace{0.6cm}
 
-\section*{Skills}
-\small
-\begin{itemize}[leftmargin=10pt,itemsep=3pt]
-\item GST \& TDS Filing
-\item Tally ERP
-\item Financial Reporting
-\item MS Excel (Advanced)
-\item Audit Support
-\item Documentation Management
-\item Client Communication
-\end{itemize}
+% Name
+\begin{center}
+{\fontsize{18}{22}\selectfont\textbf{SANJANA}}\\[2pt]
+{\fontsize{18}{22}\selectfont\textbf{PATIDAR}}
+\end{center}
 
-\section*{Tools \& Processes}
-\small
-Tally ERP, MS Excel, GST Portal, Income Tax Portal, Compliance Checklists, Audit Working Papers
+\vspace{0.8cm}
 
-\section*{Education}
-\small
-\textbf{B.Com (Tax Procedure)}\\
-P.M.B. Gujarati Commerce College, Indore\\
-Graduated — 2025 \quad | \quad CGPA: 6.42
+% Contact
+{\normalsize\textbf{CONTACT}}
 
-\textbf{Higher Secondary (CBSE)} — 68\%\\
-Gyan Sagar Academy, Ujjain
+\vspace{0.3cm}
+{\color{lightgray}\scriptsize
 
-\textbf{Secondary School (CBSE)} — 74\%\\
-Excellent Academy, Ujjain
+\faIcon{map-marker-alt} \hspace{0.15cm}
+\begin{minipage}[t]{5cm}
+Village Chiroli Kalan\\
+Teh. Badnagar, Dist. Ujjain, M.P.
+\end{minipage}
 
-\section*{Certifications}
-\small
-CA Firm Internship Certificate — Krishan Garg \& Co.\\
-CA Firm Internship Certificate — Megha Jain \& Associates
+\vspace{0.35cm}
+\faIcon{phone} \hspace{0.15cm} 6267279316
 
-\section*{Languages}
-\small
-Hindi — Native\\
-English — Professional Working Proficiency
+\vspace{0.35cm}
+\faIcon{envelope} \hspace{0.15cm}
+\begin{minipage}[t]{4.8cm}
+sanjanapatidar6267\\@gmail.com
+\end{minipage}
+}
 
-\end{paracol}
+\vspace{0.7cm}
+
+% Skills
+{\normalsize\textbf{SKILLS}}
+
+\vspace{0.3cm}
+{\color{lightgray}\scriptsize
+\textbullet\ GST \& TDS Filing\\[0.22cm]
+\textbullet\ Tally ERP\\[0.22cm]
+\textbullet\ MS Excel\\[0.22cm]
+\textbullet\ Audit Support\\[0.22cm]
+\textbullet\ Documentation\\[0.22cm]
+\textbullet\ Client Communication
+}
+
+\vspace{0.7cm}
+
+% Tools
+{\normalsize\textbf{TOOLS}}
+
+\vspace{0.3cm}
+{\color{lightgray}\scriptsize
+\textbullet\ Tally ERP\\[0.22cm]
+\textbullet\ MS Excel\\[0.22cm]
+\textbullet\ GST Portal\\[0.22cm]
+\textbullet\ Income Tax Portal\\[0.22cm]
+\textbullet\ Compliance Checklists\\[0.22cm]
+\textbullet\ Audit Working Papers
+}
+
+\vspace{0.7cm}
+
+% Languages
+{\normalsize\textbf{LANGUAGES}}
+
+\vspace{0.3cm}
+{\color{lightgray}\scriptsize
+\textbf{Hindi} — Native
+
+\vspace{0.25cm}
+\textbf{English} — Professional
+}
+
+\end{minipage}
+};
+\end{tikzpicture}
+
+% Right content
+\begin{tikzpicture}[remember picture,overlay]
+\node[anchor=north west, xshift=7.3cm, yshift=-0.7cm] at (current page.north west) {
+\begin{minipage}[t]{13.2cm}
+
+% Profile
+{\color{darkblue}\Large\textbf{PROFILE}}
+
+\vspace{0.25cm}
+{\color{medgray}\small
+Commerce graduate with hands-on internship experience in GST compliance, audit assistance, and tax-related documentation across Chartered Accountant firms.}
+
+\vspace{0.6cm}
+
+% Experience
+{\color{darkblue}\Large\textbf{WORK EXPERIENCE}}
+
+\vspace{0.35cm}
+
+{\color{accentblue}\large\textbf{Chartered Accountant Intern}}
+
+\vspace{0.12cm}
+{\color{medgray}\small\textit{Krishan Garg \& Co., Indore}} \hfill {\color{medgray}\small\textit{Oct 2023 -- Oct 2024}}
+
+\vspace{0.25cm}
+{\small
+• Assisted in multiple GST departmental audits by preparing audit files, reconciling discrepancies, and organizing supporting documentation
+
+\vspace{0.18cm}
+• Drafted tax-related communications including notice replies, compliance reminders, and clarification responses
+}
+
+\vspace{0.5cm}
+
+{\color{accentblue}\large\textbf{Chartered Accountant Intern}}
+
+\vspace{0.12cm}
+{\color{medgray}\small\textit{Megha Jain \& Associates, Indore}} \hfill {\color{medgray}\small\textit{Feb 2023 -- Aug 2023}}
+
+\vspace{0.25cm}
+{\small
+• Assisted in stock audit assignments including physical verification and documentation
+
+\vspace{0.18cm}
+• Prepared written communications, documentation, and basic audit reports
+}
+
+\vspace{0.6cm}
+
+% Key Compliance
+{\color{darkblue}\Large\textbf{KEY COMPLIANCE EXPOSURE}}
+
+\vspace{0.35cm}
+{\small
+• GST return preparation and filing (GSTR-1, GSTR-3B)
+
+\vspace{0.18cm}
+• TDS and Income Tax Return assistance
+
+\vspace{0.18cm}
+• Reconciliation between books and GST returns
+
+\vspace{0.18cm}
+• Support during GST departmental audits
+}
+
+\vspace{0.6cm}
+
+% Education
+{\color{darkblue}\Large\textbf{EDUCATION}}
+
+\vspace{0.35cm}
+
+{\color{accentblue}\large\textbf{B.Com (Tax Procedure)}}\\
+{\small P.M.B. Gujarati Commerce College, Indore \textit{(2022 -- 2025)}}\\
+{\color{medgray}\small CGPA: 6.42}
+
+\vspace{0.4cm}
+
+{\color{accentblue}\large\textbf{Higher Secondary (CBSE)}}\\
+{\small Gyan Sagar Academy, Ujjain \textit{(2022)}}\\
+{\color{medgray}\small Percentage: 68\%}
+
+\vspace{0.4cm}
+
+{\color{accentblue}\large\textbf{Secondary School (CBSE)}}\\
+{\small Excellent Academy, Ujjain \textit{(2020)}}\\
+{\color{medgray}\small Percentage: 74\%}
+\vspace{0.4cm}
+\vspace{0.4cm}
+
+% Professional Strengths
+{\color{darkblue}\Large\textbf{PROFESSIONAL STRENGTHS}}
+
+\vspace{0.35cm}
+{\small
+• Attention to detail in compliance-related work
+
+\vspace{0.18cm}
+• Ability to follow structured processes and deadlines
+
+\vspace{0.18cm}
+• Clear written communication
+
+\vspace{0.18cm}
+• Willingness to learn and adapt
+}
+
+\end{minipage}
+};
+\end{tikzpicture}
 
 \end{document}
