@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sanjana Patidar | Finance & Compliance Portfolio</title>
-    <meta name="description" content="Premium Portfolio of Sanjana Patidar - Accounting & Taxation Graduate.">
+    <title>Sanjana Patidar | Commerce Graduate & Compliance Specialist</title>
+    <meta name="description" content="Portfolio of Sanjana Patidar - Commerce Graduate specialized in GST Compliance, Audit Support, and Tax Documentation.">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -345,6 +345,9 @@
         
         .expert-item h3 { font-size: 1.2rem; margin-bottom: 12px; font-family: 'Manrope', sans-serif; font-weight: 600; }
         .expert-item p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.7; }
+        .expert-item ul { list-style: none; padding: 0; }
+        .expert-item li { margin-bottom: 8px; position: relative; padding-left: 15px; font-size: 0.9rem; color: var(--text-muted); }
+        .expert-item li::before { content: '•'; position: absolute; left: 0; color: var(--accent-gold); }
 
         /* --- 8. CONTACT FORM --- */
         .contact-layout {
@@ -361,23 +364,6 @@
             border: 1px solid var(--border-subtle);
             box-shadow: 0 20px 40px rgba(0,0,0,0.2);
         }
-
-        .input-group { margin-bottom: 25px; }
-        .input-group label { display: block; margin-bottom: 10px; font-size: 0.85rem; color: var(--text-muted); font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px;}
-        
-        .form-input {
-            width: 100%;
-            background: rgba(2, 6, 23, 0.5);
-            border: 1px solid var(--border-subtle);
-            padding: 16px;
-            border-radius: 8px;
-            color: white;
-            font-family: 'Manrope', sans-serif;
-            transition: 0.3s;
-            font-size: 1rem;
-        }
-
-        .form-input:focus { outline: none; border-color: var(--accent-gold); background: rgba(2, 6, 23, 0.8); }
 
         /* Footer */
         .footer { 
@@ -399,12 +385,9 @@
         /* --- RESPONSIVE --- */
         @media (max-width: 1024px) {
             .bento-grid { grid-template-columns: repeat(2, 1fr); }
-            /* Intro takes top row */
             .card-intro { grid-column: span 2; grid-row: auto; }
-            /* Socials takes full width below intro */
             .card-socials { grid-column: span 2; grid-row: auto; padding: 30px; }
             .social-btn { width: auto; min-width: 200px; }
-            
             .card-status { grid-column: span 1; }
             .card-stat { grid-column: span 1; }
             .card-tech { grid-column: span 2; }
@@ -413,19 +396,14 @@
 
         @media (max-width: 768px) {
             .hero-section { padding-top: 100px; }
-            
-            /* Stack everything on mobile */
             .bento-grid { grid-template-columns: 1fr; display: flex; flex-direction: column; gap: 15px; }
             .card-intro h1 { font-size: 2.5rem; }
-            
             .card-socials { flex-direction: column; align-items: stretch; }
             .social-btn { width: 100%; }
-
             .job-card { grid-template-columns: 1fr; gap: 15px; padding: 30px 0; }
             .expertise-grid { grid-template-columns: 1fr; }
             .contact-layout { grid-template-columns: 1fr; gap: 40px; }
             
-            /* Mobile Nav */
             .nav-dock { 
                 position: fixed;
                 bottom: 20px; 
@@ -453,8 +431,8 @@
     <div class="nav-wrapper">
         <nav class="nav-dock">
             <a href="#home" class="active">Home</a>
-            <a href="#expertise">Skills</a>
-            <a href="#experience">Work</a>
+            <a href="#expertise">Exposure</a>
+            <a href="#experience">Journey</a>
             <a href="#contact">Contact</a>
         </nav>
     </div>
@@ -469,9 +447,9 @@
                     <div>
                         <div class="intro-header">
                             <h4>Sanjana Patidar</h4>
-                            <h1>Finance <span class="gold-text">Precision</span> meets<br>Strategy.</h1>
+                            <h1>Commerce <span class="gold-text">Graduate</span> &<br>Compliance Specialist.</h1>
                         </div>
-                        <p class="intro-desc">Accountant & Taxation Graduate with rigorous CA firm training. Expert in GST compliance, audit defense, and Tally ERP.</p>
+                        <p class="intro-desc">Hands-on internship experience in GST compliance, audit assistance, and tax-related documentation across Chartered Accountant firms.</p>
                     </div>
                     <div>
                         <a href="https://drive.google.com/file/d/1q92UQIctSW0jU_rY3AAerOA8dTL3DJCV/view?usp=sharing" target="_blank" class="btn btn-gold">
@@ -481,7 +459,7 @@
                     </div>
                 </div>
 
-                <!-- 2. Socials Hub (Replaces Photo) -->
+                <!-- 2. Socials Hub -->
                 <div class="bento-card card-socials reveal">
                     <h3 style="width: 100%; text-align: center; font-size: 1rem; color: var(--text-muted); margin-bottom: 5px;">Let's Connect</h3>
                     
@@ -499,35 +477,35 @@
                 <!-- 3. Status -->
                 <div class="bento-card card-status reveal">
                     <span class="status-badge"><span class="status-dot"></span> Available</span>
-                    <h3 style="font-family: 'Manrope'; font-size: 1rem; color: var(--text-muted); margin-bottom: 5px;">Role Preference:</h3>
+                    <h3 style="font-family: 'Manrope'; font-size: 1rem; color: var(--text-muted); margin-bottom: 5px;">Looking for Role:</h3>
                     <p style="font-weight: 700; font-size: 1.1rem;">Accounts Executive</p>
                 </div>
 
                 <!-- 4. Stat: Returns -->
                 <div class="bento-card card-stat reveal">
-                    <span class="stat-num" data-val="40">0</span>
-                    <span class="stat-label">Returns Filed</span>
+                    <span class="stat-num" data-val="100">0</span>
+                    <span class="stat-label">Audit & Compliance</span>
                 </div>
 
                 <!-- 5. Stat: Exp -->
                 <div class="bento-card card-stat reveal">
                     <span class="stat-num" data-val="18">0</span>
-                    <span class="stat-label">Months Exp</span>
+                    <span class="stat-label">Months Experience</span>
                 </div>
 
                 <!-- 6. Tech Stack (SVG Icons) -->
                 <div class="bento-card card-tech reveal">
-                    <h3 style="font-size: 1.1rem; color: var(--text-white);">Tech Stack</h3>
+                    <h3 style="font-size: 1.1rem; color: var(--text-white);">Tools</h3>
                     <div class="tech-icons">
                         <div class="tech-item">
                             <!-- Monitor Icon -->
                             <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
-                            <span>Tally</span>
+                            <span>Tally ERP</span>
                         </div>
                         <div class="tech-item">
                             <!-- FileText Icon -->
                             <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-                            <span>GST</span>
+                            <span>GST Portal</span>
                         </div>
                         <div class="tech-item">
                             <!-- TrendingUp Icon -->
@@ -539,7 +517,7 @@
 
                 <!-- 7. CTA Block -->
                 <a href="#experience" class="bento-card card-cta reveal">
-                    <h3>See My Work Journey</h3>
+                    <h3>Explore My Professional Journey</h3>
                     <div class="arrow-btn">
                         <svg viewBox="0 0 24 24" style="width: 20px; height: 20px;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                     </div>
@@ -549,12 +527,12 @@
         </div>
     </section>
 
-    <!-- EXPERTISE SECTION -->
+    <!-- KEY COMPLIANCE EXPOSURE (Skills) -->
     <section id="expertise" class="section-padding">
         <div class="container">
             <div class="section-header reveal">
-                <h2>Technical Expertise</h2>
-                <p>Bridging complex regulations with flawless execution.</p>
+                <h2>Key Compliance Exposure</h2>
+                <p>Practical expertise in Tax Procedures and Statutory Audits.</p>
             </div>
             
             <div class="expertise-grid">
@@ -563,8 +541,11 @@
                     <div class="expert-icon">
                         <svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
                     </div>
-                    <h3>GST Compliance</h3>
-                    <p>End-to-end filing of GSTR-1 and GSTR-3B. Reconciliation of GSTR-2A/2B with books ensuring max ITC claim.</p>
+                    <h3>GST & Returns</h3>
+                    <ul>
+                        <li>GST return preparation and filing (GSTR-1, GSTR-3B)</li>
+                        <li>Reconciliation between books and GST returns</li>
+                    </ul>
                 </div>
                 <!-- 2 -->
                 <div class="expert-item reveal">
@@ -572,25 +553,33 @@
                         <svg viewBox="0 0 24 24"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>
                     </div>
                     <h3>Audit Support</h3>
-                    <p>Departmental audit assistance. Vouching, verification of expenses, and preparation of audit files for CAs.</p>
+                    <ul>
+                        <li>Support during GST departmental audits</li>
+                        <li>Preparing audit working papers</li>
+                        <li>Stock audit assignments (physical verification)</li>
+                    </ul>
                 </div>
                 <!-- 3 -->
                 <div class="expert-item reveal">
                     <div class="expert-icon">
                         <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
                     </div>
-                    <h3>Tally & Accounting</h3>
-                    <p>Expertise in Tally Prime. Voucher entry, ledger scrutiny, Bank Reconciliation Statements (BRS), and Stock maintenance.</p>
+                    <h3>Documentation</h3>
+                    <ul>
+                        <li>TDS and Income Tax Return assistance</li>
+                        <li>Drafting notice replies & compliance reminders</li>
+                        <li>Client written communication</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- EXPERIENCE SECTION -->
+    <!-- WORK EXPERIENCE -->
     <section id="experience" class="section-padding" style="background: rgba(255,255,255,0.02);">
         <div class="container">
             <div class="section-header reveal">
-                <h2>Professional Journey</h2>
+                <h2>Work Experience</h2>
             </div>
 
             <!-- Job 1 -->
@@ -603,9 +592,8 @@
                 <div class="job-details">
                     <h3>Chartered Accountant Intern</h3>
                     <ul>
-                        <li><strong>High Volume Filing:</strong> Managed 40+ Direct/Indirect tax returns independently with zero penalty notices.</li>
-                        <li><strong>Audit Defense:</strong> Supported 3 GST departmental audits by creating precise reconciliation statements.</li>
-                        <li><strong>Client Communication:</strong> Drafted responses to tax notices and compliance reminders.</li>
+                        <li>Assisted in multiple GST departmental audits by preparing audit files, reconciling discrepancies, and organizing supporting documentation.</li>
+                        <li>Drafted tax-related communications including notice replies, compliance reminders, and clarification responses.</li>
                     </ul>
                 </div>
             </div>
@@ -620,9 +608,8 @@
                 <div class="job-details">
                     <h3>Chartered Accountant Intern</h3>
                     <ul>
-                        <li><strong>Data Precision:</strong> Handled end-to-end Tally data entry for 30+ clients monthly.</li>
-                        <li><strong>Inventory Control:</strong> Conducted physical stock verification for manufacturing clients.</li>
-                        <li><strong>Documentation:</strong> Maintained audit working papers and client files.</li>
+                        <li>Assisted in stock audit assignments including physical verification and documentation.</li>
+                        <li>Prepared written communications, documentation, and basic audit reports.</li>
                     </ul>
                 </div>
             </div>
@@ -637,15 +624,25 @@
                 <h2>Education</h2>
             </div>
             <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+                <!-- B.Com -->
                 <div class="bento-card reveal" style="flex: 1; min-width: 280px; flex-direction: column; align-items: flex-start;">
                     <h4 style="color: var(--accent-gold); font-size: 1.1rem; margin-bottom: 5px;">B.Com (Tax Procedure)</h4>
-                    <p style="font-weight: 600;">P.M.B. Gujarati Commerce College</p>
-                    <p style="color: var(--text-muted); font-size: 0.9rem;">Graduated 2025 | CGPA: 6.42</p>
+                    <p style="font-weight: 600;">P.M.B. Gujarati Commerce College, Indore</p>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">2022 -- 2025 | CGPA: 6.42</p>
                 </div>
+                
+                <!-- 12th -->
                 <div class="bento-card reveal" style="flex: 1; min-width: 280px; flex-direction: column; align-items: flex-start;">
-                    <h4 style="color: var(--accent-gold); font-size: 1.1rem; margin-bottom: 5px;">12th Commerce</h4>
-                    <p style="font-weight: 600;">Gyan Sagar Academy</p>
-                    <p style="color: var(--text-muted); font-size: 0.9rem;">68% | 2022</p>
+                    <h4 style="color: var(--accent-gold); font-size: 1.1rem; margin-bottom: 5px;">Higher Secondary (CBSE)</h4>
+                    <p style="font-weight: 600;">Gyan Sagar Academy, Ujjain</p>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">2022 | Percentage: 68%</p>
+                </div>
+
+                <!-- 10th -->
+                <div class="bento-card reveal" style="flex: 1; min-width: 280px; flex-direction: column; align-items: flex-start;">
+                    <h4 style="color: var(--accent-gold); font-size: 1.1rem; margin-bottom: 5px;">Secondary School (CBSE)</h4>
+                    <p style="font-weight: 600;">Excellent Academy, Ujjain</p>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">2020 | Percentage: 74%</p>
                 </div>
             </div>
         </div>
@@ -657,15 +654,19 @@
             <div class="contact-layout">
                 <div class="reveal">
                     <h1 style="font-size: 3rem; margin-bottom: 20px;">Ready to <br><span class="gold-text">Start.</span></h1>
-                    <p style="color: var(--text-muted); margin-bottom: 40px; font-size: 1.1rem;">I am available for full-time roles in Accounting and Taxation. I can join immediately.</p>
+                    <p style="color: var(--text-muted); margin-bottom: 40px; font-size: 1.1rem;">Professional strengths include attention to detail, structured processes, and clear written communication.</p>
                     
-                    <div style="margin-bottom: 30px;">
+                    <div style="margin-bottom: 20px;">
                         <h5 style="color: var(--text-white); font-size: 0.9rem; text-transform: uppercase; margin-bottom: 5px;">Email</h5>
                         <p style="color: var(--text-muted); font-size: 1.1rem;">sanjanapatidar6267@gmail.com</p>
                     </div>
-                    <div>
+                    <div style="margin-bottom: 20px;">
                         <h5 style="color: var(--text-white); font-size: 0.9rem; text-transform: uppercase; margin-bottom: 5px;">Phone</h5>
-                        <p style="color: var(--text-muted); font-size: 1.1rem;">+91 62672 79315</p>
+                        <p style="color: var(--text-muted); font-size: 1.1rem;">+91 62672 79316</p>
+                    </div>
+                    <div>
+                        <h5 style="color: var(--text-white); font-size: 0.9rem; text-transform: uppercase; margin-bottom: 5px;">Address</h5>
+                        <p style="color: var(--text-muted); font-size: 1.1rem;">Village Chiroli Kalan, Teh. Badnagar, Dist. Ujjain, M.P.</p>
                     </div>
                 </div>
 
